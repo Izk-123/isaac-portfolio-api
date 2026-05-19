@@ -2,7 +2,7 @@ from django.db import models
 
 class SkillCategory(models.Model):
     icon     = models.CharField(max_length=10, default='💻')
-    category = models.CharField(max_length=100)
+    category = models.CharField(max_length=100, unique=True)
     color    = models.CharField(max_length=7, default='#2563EB')
     order    = models.IntegerField(default=0)
 
@@ -20,7 +20,7 @@ class Skill(models.Model):
         on_delete=models.CASCADE,
         related_name='skills'
     )
-    name = models.CharField(max_length=100)
+    name = models.CharField(max_length=100, unique=True)
     order = models.IntegerField(default=0)
 
     class Meta:
