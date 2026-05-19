@@ -15,7 +15,7 @@ class Hero(models.Model):
     class Meta:
         verbose_name_plural = "Hero"
         constraints = [
-            models.CheckConstraint(condition=models.Q(id=1), name="single_hero_row")
+            models.CheckConstraint(check=models.Q(id=1), name="single_hero_row")
         ]
 
     def save(self, *args, **kwargs):
@@ -49,7 +49,7 @@ class AboutSection(models.Model):
     class Meta:
         verbose_name_plural = "About Section"
         constraints = [
-            models.CheckConstraint(condition=models.Q(id=1), name="single_about_row")
+            models.CheckConstraint(check=models.Q(id=1), name="single_about_row")
         ]
 
     def save(self, *args, **kwargs):
@@ -124,6 +124,37 @@ class ContactInfo(models.Model):
         ordering = ['order']
         verbose_name_plural = "Contact info"
         unique_together = ['label', 'value']
+
+    def __str__(self):
+        return self.label
+    
+class Footer(models.Model):
+    copyright_text = models.CharField(max_length=200, default="© 2026 Isaac Michael Ndoka")
+    built_with_text = models.CharField(max_length=200, default="Built with Next.js · Tailwind CSS · Framer Motion")
+
+    class Meta:
+        verbose_name_plural = "Footer"
+        constraints = [
+            models.CheckConstraint(check=models.Q(id=1), name="single_footer_row")
+        ]
+
+    def save(self, *args, **kwargs):
+        if not self.pk and Footer.objects.exists():
+            raise ValueError("Only one Footer instance allowed")
+        super().save(*args, **kwargs)
+
+    def __str__(self):
+        return "Footer Section"
+
+class FooterLink(models.Model):
+    footer = models.ForeignKey(Footer, on_delete=models.CASCADE, related_name='links')
+    label = models.CharField(max_length=50)
+    href = models.URLField(max_length=200)
+    order = models.IntegerField(default=0)
+
+    class Meta:
+        ordering = ['order']
+        unique_together = ['footer', 'label']
 
     def __str__(self):
         return self.label

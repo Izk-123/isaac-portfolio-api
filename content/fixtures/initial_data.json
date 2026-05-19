@@ -1,0 +1,322 @@
+[
+    {
+        "model": "content.hero",
+        "pk": 1,
+        "fields": {
+            "greeting": "👋 Hello, I'm",
+            "name_line1": "Isaac Michael",
+            "name_line2": "Ndoka",
+            "highlight_text": "Ndoka",
+            "description": "I build modern software systems, engineering solutions, and practical technologies that solve real-world challenges.",
+            "primary_cta": "View Projects",
+            "primary_cta_link": "#projects",
+            "secondary_cta": "Contact Me",
+            "secondary_cta_link": "#contact"
+        }
+    },
+    {
+        "model": "content.typedrole",
+        "pk": 1,
+        "fields": {
+            "hero": 1,
+            "role": "Electronics & Computer Engineer",
+            "order": 1
+        }
+    },
+    {
+        "model": "content.typedrole",
+        "pk": 2,
+        "fields": {
+            "hero": 1,
+            "role": "Django Developer",
+            "order": 2
+        }
+    },
+    {
+        "model": "content.typedrole",
+        "pk": 3,
+        "fields": {
+            "hero": 1,
+            "role": "AI Enthusiast",
+            "order": 3
+        }
+    },
+    {
+        "model": "content.typedrole",
+        "pk": 4,
+        "fields": {
+            "hero": 1,
+            "role": "Problem Solver",
+            "order": 4
+        }
+    },
+    {
+        "model": "content.aboutsection",
+        "pk": 1,
+        "fields": {
+            "tagline": "About me",
+            "title_line1": "Engineer. Developer.",
+            "title_line2": "Problem Solver.",
+            "highlight_text": "Problem Solver.",
+            "profile_emoji": "👨‍💻",
+            "availability_badge": "Available for hire"
+        }
+    },
+    {
+        "model": "content.aboutparagraph",
+        "pk": 1,
+        "fields": {
+            "about_section": 1,
+            "text": "I'm Isaac Michael Ndoka, an Electronics & Computer Engineering student at MUBAS, Malawi. I build practical software systems and engineering solutions that tackle real challenges in Africa's growing tech ecosystem.",
+            "order": 1
+        }
+    },
+    {
+        "model": "content.aboutparagraph",
+        "pk": 2,
+        "fields": {
+            "about_section": 1,
+            "text": "Beyond code, I co-founded Tech-ON Networks and completed an industrial attachment at LAMBANO Technologies — where I discovered that the best solutions sit at the intersection of hardware and software.",
+            "order": 2
+        }
+    },
+    {
+        "model": "content.stat",
+        "pk": 1,
+        "fields": {
+            "about_section": 1,
+            "number": "10+",
+            "label": "Projects built",
+            "order": 1
+        }
+    },
+    {
+        "model": "content.stat",
+        "pk": 2,
+        "fields": {
+            "about_section": 1,
+            "number": "2+",
+            "label": "Years coding",
+            "order": 2
+        }
+    },
+    {
+        "model": "content.stat",
+        "pk": 3,
+        "fields": {
+            "about_section": 1,
+            "number": "3",
+            "label": "Tech ventures",
+            "order": 3
+        }
+    },
+    {
+        "model": "content.stat",
+        "pk": 4,
+        "fields": {
+            "about_section": 1,
+            "number": "🇲🇼",
+            "label": "Based in Malawi",
+            "order": 4
+        }
+    },
+    {
+        "model": "content.experience",
+        "pk": 1,
+        "fields": {
+            "role": "B.Eng Electronics & Computer Engineering",
+            "organization": "🏛 MUBAS — Malawi University of Business & Applied Sciences",
+            "period": "2022 – Present",
+            "description": "Studying electronics, embedded systems, networking, and software engineering. Building real projects alongside coursework.",
+            "icon": "🎓",
+            "color": "#2563EB",
+            "bg_color": "rgba(37,99,235,0.1)",
+            "text_color": "#93C5FD",
+            "order": 1
+        }
+    },
+    {
+        "model": "content.experiencetag",
+        "pk": 1,
+        "fields": {
+            "experience": 1,
+            "tag": "Engineering"
+        }
+    },
+    {
+        "model": "content.experiencetag",
+        "pk": 2,
+        "fields": {
+            "experience": 1,
+            "tag": "Embedded Systems"
+        }
+    },
+    {
+        "model": "content.experiencetag",
+        "pk": 3,
+        "fields": {
+            "experience": 1,
+            "tag": "Networking"
+        }
+    },
+    {
+        "model": "content.experience",
+        "pk": 2,
+        "fields": {
+            "role": "Software Developer — Industrial Attachment",
+            "organization": "🏢 LAMBANO Technologies",
+            "period": "2024",
+            "description": "Built and maintained software systems during industrial attachment. Gained hands-on experience in real production environments.",
+            "icon": "💼",
+            "color": "#7C3AED",
+            "bg_color": "rgba(124,58,237,0.1)",
+            "text_color": "#C4B5FD",
+            "order": 2
+        }
+    },
+    {
+        "model": "content.experiencetag",
+        "pk": 4,
+        "fields": {
+            "experience": 2,
+            "tag": "Django"
+        }
+    },
+    {
+        "model": "content.experiencetag",
+        "pk": 5,
+        "fields": {
+            "experience": 2,
+            "tag": "Python"
+        }
+    },
+    {
+        "model": "content.experiencetag",
+        "pk": 6,
+        "fields": {
+            "experience": 2,
+            "tag": "REST APIs"
+        }
+    },
+    {
+        "model": "content.experience",
+        "pk": 3,
+        "fields": {
+            "role": "Co-Founder & Developer",
+            "organization": "⚡ Tech-ON Networks",
+            "period": "2023 – Present",
+            "description": "Co-founded a tech venture focused on networking and software solutions in Malawi. Building products that solve local challenges.",
+            "icon": "🚀",
+            "color": "#06B6D4",
+            "bg_color": "rgba(6,182,212,0.1)",
+            "text_color": "#67E8F9",
+            "order": 3
+        }
+    },
+    {
+        "model": "content.experiencetag",
+        "pk": 7,
+        "fields": {
+            "experience": 3,
+            "tag": "Networking"
+        }
+    },
+    {
+        "model": "content.experiencetag",
+        "pk": 8,
+        "fields": {
+            "experience": 3,
+            "tag": "Entrepreneurship"
+        }
+    },
+    {
+        "model": "content.experiencetag",
+        "pk": 9,
+        "fields": {
+            "experience": 3,
+            "tag": "Leadership"
+        }
+    },
+    {
+        "model": "content.contactinfo",
+        "pk": 1,
+        "fields": {
+            "icon": "✉",
+            "label": "Email",
+            "value": "isaacndoka7@gmail.com",
+            "href": "mailto:isaacndoka7@gmail.com",
+            "order": 1
+        }
+    },
+    {
+        "model": "content.contactinfo",
+        "pk": 2,
+        "fields": {
+            "icon": "📍",
+            "label": "Location",
+            "value": "Blantyre, Malawi",
+            "href": null,
+            "order": 2
+        }
+    },
+    {
+        "model": "content.contactinfo",
+        "pk": 3,
+        "fields": {
+            "icon": "💼",
+            "label": "LinkedIn",
+            "value": "/in/isaac-ndoka",
+            "href": "https://linkedin.com/in/isaac-ndoka",
+            "order": 3
+        }
+    },
+    {
+        "model": "content.contactinfo",
+        "pk": 4,
+        "fields": {
+            "icon": "🐙",
+            "label": "GitHub",
+            "value": "https://github.com/Izk-123",
+            "href": "https://github.com/Izk-123",
+            "order": 4
+        }
+    }
+  {
+        "model": "content.footer",
+        "pk": 1,
+        "fields": {
+            "copyright_text": "© 2026 Isaac Michael Ndoka",
+            "built_with_text": "Built with Next.js · Tailwind CSS · Framer Motion"
+        }
+    },
+    {
+        "model": "content.footerlink",
+        "pk": 1,
+        "fields": {
+            "footer": 1,
+            "label": "GitHub",
+            "href": "https://github.com/Izk-123",
+            "order": 1
+        }
+    },
+    {
+        "model": "content.footerlink",
+        "pk": 2,
+        "fields": {
+            "footer": 1,
+            "label": "LinkedIn",
+            "href": "https://linkedin.com/in/isaac-ndoka",
+            "order": 2
+        }
+    },
+    {
+        "model": "content.footerlink",
+        "pk": 3,
+        "fields": {
+            "footer": 1,
+            "label": "Email",
+            "href": "mailto:isaacndoka7@gmail.com",
+            "order": 3
+        }
+    }
+]

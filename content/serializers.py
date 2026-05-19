@@ -50,3 +50,17 @@ class ContactInfoSerializer(serializers.ModelSerializer):
     class Meta:
         model = ContactInfo
         fields = '__all__'
+        
+from .models import Footer, FooterLink
+
+class FooterLinkSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = FooterLink
+        fields = ['label', 'href']
+
+class FooterSerializer(serializers.ModelSerializer):
+    links = FooterLinkSerializer(many=True, read_only=True)
+
+    class Meta:
+        model = Footer
+        fields = ['copyright_text', 'built_with_text', 'links']

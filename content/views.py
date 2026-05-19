@@ -26,3 +26,14 @@ class ExperienceListView(ListAPIView):
 class ContactInfoListView(ListAPIView):
     queryset = ContactInfo.objects.all()
     serializer_class = ContactInfoSerializer
+    
+
+from .models import Footer
+from .serializers import FooterSerializer
+
+class FooterView(RetrieveAPIView):
+    queryset = Footer.objects.all()
+    serializer_class = FooterSerializer
+
+    def get_object(self):
+        return Footer.objects.first()
