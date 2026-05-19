@@ -15,7 +15,7 @@ class Hero(models.Model):
     class Meta:
         verbose_name_plural = "Hero"
         constraints = [
-            models.CheckConstraint(check=models.Q(id=1), name="single_hero_row")
+            models.CheckConstraint(condition=models.Q(id=1), name="single_hero_row")
         ]
 
     def save(self, *args, **kwargs):
@@ -49,7 +49,7 @@ class AboutSection(models.Model):
     class Meta:
         verbose_name_plural = "About Section"
         constraints = [
-            models.CheckConstraint(check=models.Q(id=1), name="single_about_row")
+            models.CheckConstraint(condition=models.Q(id=1), name="single_about_row")
         ]
 
     def save(self, *args, **kwargs):
