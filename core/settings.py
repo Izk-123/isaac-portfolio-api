@@ -133,6 +133,7 @@ CORS_ALLOWED_ORIGINS = [
     "http://localhost:3000",        # local Next.js dev
     "https://isaac-portfolio-tan.vercel.app",  # your live site
     "https://isaac-portfolio-5iu8bqgy1-is-projects-25964354.vercel.app",
+    "https://isaac-api.mooo.com",
 ]
 
 # Allow cookies/auth headers if needed later
