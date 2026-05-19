@@ -135,7 +135,7 @@ class Footer(models.Model):
     class Meta:
         verbose_name_plural = "Footer"
         constraints = [
-            models.CheckConstraint(check=models.Q(id=1), name="single_footer_row")
+            models.CheckConstraint(condition=models.Q(id=1), name="single_footer_row")
         ]
 
     def save(self, *args, **kwargs):
