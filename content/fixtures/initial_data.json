@@ -280,8 +280,8 @@
             "href": "https://github.com/Izk-123",
             "order": 4
         }
-    }
-  {
+    },
+    {
         "model": "content.footer",
         "pk": 1,
         "fields": {
